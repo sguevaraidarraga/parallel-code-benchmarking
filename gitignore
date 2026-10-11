@@ -1,0 +1,5 @@
+# Ejecutables compilados
+secuencial
+a.out
+*.exe
+*.o
