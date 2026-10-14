@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar convolución paralela (OpenMP)",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++11",
+        "-O3",
+        "-fopenmp",
+        "-Wall",
+        "-Wextra",
+        "convolve.cpp",
+        "-o",
+        "convolve.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}
