@@ -1,0 +1,10 @@
+Fecha: 2026-10-14
+Procesador: AMD Ryzen 7 5700X 8-Core Processor
+Nucleos logicos (hilos que ofrece el sistema): 16
+Thread(s) per core:                      2
+Core(s) per socket:                      8
+Socket(s):                               1
+Memoria RAM (GB): 15.6
+Sistema operativo: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+Compilador: g++ (GCC) 13.5.0
+Python: 3.11.2
