@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-// Genera una imagen cuadrada con valores aleatorios (0 a 255)
+// Genera una imagen cuadrada con valores (0 a 255)
 vector<int> generarImagen(int n) {
     vector<int> img(n * n);
     int estado = 12345;
@@ -74,7 +74,7 @@ int main() {
     double ms = 1000.0 * (fin - inicio) / CLOCKS_PER_SEC;
 
     // Salida de resultados
-    cout << "Tiempo de procesamiento: " << ms << endl;
+cout << "Tiempo de procesamiento (ms): " << ms << endl;
     cout << "Checksum: " << checksum(salida) << endl;
     return 0;
 }
