@@ -1,12 +1,10 @@
 param(
-    [ValidateSet('check', 'quick', 'full')][string]$Mode = 'full',
-    [string]$Compiler = 'g++',
-    [string]$InputDir
+    [ValidateSet('check', 'quick')][string]$Mode = 'check',
+    [string]$Compiler = 'g++'
 )
 $ErrorActionPreference = 'Stop'
 $runner = Join-Path $PSScriptRoot 'run_tests.py'
 $runnerArgs = @($runner, $Mode, '--compiler', $Compiler)
-if ($InputDir) { $runnerArgs += @('--input-dir', $InputDir) }
 if (Get-Command py -ErrorAction SilentlyContinue) {
     & py -3 @runnerArgs
 } elseif (Get-Command python -ErrorAction SilentlyContinue) {

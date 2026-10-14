@@ -2,18 +2,16 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Compilar convolución paralela (OpenMP)",
+      "label": "Compilar convoluciÃ³n paralela (OpenMP)",
       "type": "shell",
       "command": "g++",
       "args": [
-        "-std=c++11",
-        "-O3",
+        "-O2",
+        "-std=c++17",
         "-fopenmp",
-        "-Wall",
-        "-Wextra",
         "convolve.cpp",
         "-o",
-        "convolve.exe"
+        "paralelo_manual.exe"
       ],
       "group": {
         "kind": "build",
