@@ -11,7 +11,7 @@ Autores: [completar nombres]. Curso: Programación Paralela, [completar universi
 | Secuencial | `secuencial.cpp` | Rama secuencial | Ninguna | `clock()` |
 | Paralelo IA | `paralelo_ia.cpp` | GitHub Copilot. Prompt en `prompts/` | `#pragma omp parallel for` sobre las filas, con `num_threads(hilos)` y schedule por defecto | `omp_get_wtime()` |
 | Paralelo IA + Opt. | `paralelo_ia_opt.cpp` | Copilot + ajustes| Igual, con `schedule(static)`, separación de zona interior y bordes, y punteros `__restrict` y de fila | `omp_get_wtime()` |
-| Paralelo manual | `paralelo_manual.cpp` | Rama `Parallel-Manual` (archivo `convolve.cpp`), adaptado de [completar la fuente del código original] | `omp parallel` con `omp for schedule(static)`, `default(none)` y verificación del número de hilos | `std::chrono::steady_clock` |
+| Paralelo manual | `paralelo_manual.cpp` | Rama `Parallel-Manual` (archivo `convolve.cpp`), adaptado de [https://github.com/juancadg03/Parallel-Manual] | `omp parallel` con `omp for schedule(static)`, `default(none)` y verificación del número de hilos | `std::chrono::steady_clock` |
 
 Las cuatro versiones generan la misma imagen, usan el mismo kernel (todo unos), tratan los bordes como 0, calculan con enteros y entregan el mismo checksum. Se compilan con la misma línea: `g++ -O2 -std=c++17 -fopenmp`.
 
